@@ -1,0 +1,20 @@
+physics:
+  gravity:   [0, 0, -9.81]
+  time_step: 0.004167        # 240 Hz
+env:
+  max_steps:     300
+  physics_loops: 8
+  delta_q:      [0.08, 0.04, 0.02]
+goal_range:
+  x: [0.15, 0.55]
+  y: [-0.35, 0.35]
+  z: [0.10, 0.60]
+reward:
+  k_dist: -5.0
+  k_prog: 15.0
+  bonus:  10.0
+success_th_curriculum:
+  early: 0.05
+  late:  0.03
+domain_rand:
+  gravity_jitter: 0.10
